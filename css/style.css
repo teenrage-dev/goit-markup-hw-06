@@ -910,6 +910,10 @@ address{
     cursor: pointer;
 }
 
+.input-checkbox-wraper:focus{
+    border: 2px solid var(--accent-text-color);
+}
+
 
 .checkbox-link{
     color: var(--accent-text-color);
