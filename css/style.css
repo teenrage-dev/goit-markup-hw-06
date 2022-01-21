@@ -875,6 +875,7 @@ address{
     color: var(--seventh-text-color);
 }
 
+
 .input-checkbox:checked + .input-chekbox-text .input-checkbox-wraper{
     border: none;
     background-color: var(--accent-text-color);
@@ -910,13 +911,14 @@ address{
     cursor: pointer;
 }
 
-.input-checkbox-wraper:focus{
+.input-checkbox:focus + .input-chekbox-text .input-checkbox-wraper,
+.input-checkbox:hover + .input-chekbox-text .input-checkbox-wraper{
     border: 2px solid var(--accent-text-color);
 }
 
-
 .checkbox-link{
     color: var(--accent-text-color);
+    margin-left: 4px;
 }
 
 .modal-form .hero-button{
