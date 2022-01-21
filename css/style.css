@@ -507,6 +507,10 @@ header{
     margin-right: 70px;
 }
 
+.footer-item:last-child{
+    margin-left: auto;
+}
+
 .footer .logo{
     margin-bottom: 20px;
     display: block;
@@ -578,6 +582,11 @@ address{
     align-items: center;
 }
 
+.footer-input-email:hover,
+.footer-input-email:focus{
+    border: 1px solid var(--accent-text-color);
+}
+
 .footer-input-email{
     display: inline-block;
     background-color: transparent;
@@ -587,6 +596,8 @@ address{
     padding: 15px 16px;
     margin-right: 12px;
     color: var(--eighth-text-color);
+    transition: border var(--transition);
+    outline: none;
 }
 
 .footer-input-email::placeholder{
@@ -765,14 +776,15 @@ address{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: transparent;
 }
 
 .exit-btn-icon{
     transition: fill var(--transition);
 }
 
-.exit-btn-icon:hover,
-.exit-btn-icon:focus{
+.modal-close:hover .exit-btn-icon,
+.modal-close:focus .exit-btn-icon{
     fill: var(--accent-text-color);
 }
 
@@ -806,10 +818,12 @@ address{
     margin-bottom: 10px;
 }
 
+.form-input:hover,
 .form-input:focus{
-    border-color: var(--accent-text-color);
+    border: 1px solid var(--accent-text-color);
 }
 
+.form-input:hover + .input-icon,
 .form-input:focus + .input-icon{
     fill: var(--accent-text-color);
 }
@@ -833,7 +847,7 @@ address{
     border-radius: 4px;
     padding: 0 0 0 42px;
     outline: none;
-    transition: border-color var(--transition);
+    transition: border var(--transition);
 }
 
 .form-text{
@@ -845,6 +859,12 @@ address{
     border-radius: 4px;
     margin-bottom: 20px;
     outline: none;
+    transition: border var(--transition);
+}
+
+.form-text:hover,
+.form-text:focus{
+    border: 1px solid var(--accent-text-color);
 }
 
 .form-input::placeholder{
@@ -855,7 +875,7 @@ address{
     color: var(--seventh-text-color);
 }
 
-.input-checkbox:checked + .input-chekbox-text span{
+.input-checkbox:checked + .input-chekbox-text .input-checkbox-wraper{
     border: none;
     background-color: var(--accent-text-color);
 }
@@ -873,11 +893,12 @@ address{
     font-family: "Roboto", sans-serif;
     text-align: center;
     display: flex;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
 }
 
-.input-chekbox-text span{
+.input-checkbox-wraper{
     width: 16px;
     height: 15px;
     border: 2px solid var(--first-text-color);
@@ -886,6 +907,7 @@ address{
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 
